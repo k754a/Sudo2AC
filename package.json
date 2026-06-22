@@ -2,7 +2,12 @@
   "name": "sudo2ac",
   "displayName": "Sudo2AC",
   "description": "A Visual Studio Code plugin that uses Ollama to convert natural language to actual code (sudo 2 actual code).",
+  "publisher": "kallenseelo",
   "version": "0.0.1",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/k754a/Sudo2AC"
+  },
   "engines": {
     "vscode": "^1.125.0"
   },
@@ -12,6 +17,14 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "keybindings": [
+      {
+        "command": "sudo2ac.transform",
+        "key": "ctrl+shift+/",
+        "mac": "cmd+shift+/",
+        "when": "editorHasSelection"
+      }
+    ],
     "commands": [
 
       {
@@ -57,11 +70,6 @@
       "type": "string",
       "default": "OK SO YOUR JOB IS TO CONVERT PSEUDOCODE/COMMENTS INTO REAL WORKING CODE. YOU GET THE WHOLE FILE AS CONTEXT SO USE IT. HERE IS WHAT YOU DO: GO LINE BY LINE, IF ITS A COMMENT DESCRIBING SOMETHING, CONVERT IT TO ACTUAL CODE. IF ITS ALREADY REAL CODE, LEAVE IT ALONE. KEEP ALL THE INDENTATION AND SPACING EXACTLY AS IS. IF SOMETHING IS AMBIGUOUS JUST MAKE YOUR BEST GUESS USING THE SURROUNDING CODE AS CONTEXT. DO NOT WRITE ANYTHING EXCEPT THE CODE. NO EXPLANATIONS, NO BACKTICKS, NO MARKDOWN, NOTHING. JUST THE RAW CODE. IF THE INPUT IS ALREADY VALID CODE WITH NO PSEUDOCODE, RETURN IT EXACTLY AS IS.",
       "description": "The prompt that helps the ai respond correctly."
-    },
-    "sudo2ac.shortcut": {
-    "type": "string",
-    "default": "ctrl+shift+a",
-    "description": "Shortcut to convert highlighted code"
     }
     
 
