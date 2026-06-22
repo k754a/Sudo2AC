@@ -13,12 +13,74 @@
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
+
       {
-        "command": "sudo2ac.helloWorld",
-        "title": "Hello World"
+        "command": "sudo2ac.transform",
+        "title": "Sudo2AC: Convert Highlighted Code"
+      },
+      { 
+        "command": "sudo2ac.opensettings",
+        "title": "Sudo2AC: Open Settings",
+        "icon" : "$(gear)"
       }
+    ],
+    "menus": {
+    "editor/title": [
+        {
+          "command": "sudo2ac.opensettings",
+          "group": "navigation"
+        }
+      ],
+
+
+    "editor/context": [
+      {
+          "command": "sudo2ac.transform",
+          "when": "editorHasSelection",
+          "group": "navigation"
+
+        }
+
     ]
+    },
+
+    "configuration": {
+  "title": "Sudo2AC",
+  "properties": {
+
+    "sudo2ac.model": {
+      "type": "string",
+      "default": "gemma4:e2b",
+      "description": "Ollama AI model to use"
+    },
+    "sudo2ac.systemPrompt": {
+      "type": "string",
+      "default": "OK SO YOUR JOB IS TO CONVERT PSEUDOCODE/COMMENTS INTO REAL WORKING CODE. YOU GET THE WHOLE FILE AS CONTEXT SO USE IT. HERE IS WHAT YOU DO: GO LINE BY LINE, IF ITS A COMMENT DESCRIBING SOMETHING, CONVERT IT TO ACTUAL CODE. IF ITS ALREADY REAL CODE, LEAVE IT ALONE. KEEP ALL THE INDENTATION AND SPACING EXACTLY AS IS. IF SOMETHING IS AMBIGUOUS JUST MAKE YOUR BEST GUESS USING THE SURROUNDING CODE AS CONTEXT. DO NOT WRITE ANYTHING EXCEPT THE CODE. NO EXPLANATIONS, NO BACKTICKS, NO MARKDOWN, NOTHING. JUST THE RAW CODE. IF THE INPUT IS ALREADY VALID CODE WITH NO PSEUDOCODE, RETURN IT EXACTLY AS IS.",
+      "description": "The prompt that helps the ai respond correctly."
+    },
+    "sudo2ac.shortcut": {
+    "type": "string",
+    "default": "ctrl+shift+a",
+    "description": "Shortcut to convert highlighted code"
+    }
+    
+
+  }
+}
+    
   },
+
+
+
+
+
+
+
+
+
+
+
+  
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
