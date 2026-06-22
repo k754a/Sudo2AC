@@ -1,0 +1,22 @@
+this is the plan
+
+
+
+currently ai isnt great at doing like a full parser, but i think it could be good, at translating things like sudo code, into functions
+
+my thought is, we create a syntax like /*SUDO */ and then we have a thing like ctr h, or somthin, that converts it into code. this allows people to code at a faster rate,
+it also helps them learn new things, while adding them to there code, for example, i could have a function adding 2 numbrs, but i dont know how to write a function
+
+
+
+number1 = 5
+number2 = 10
+
+
+/*SUDO Create a function and add number1 and number2 and print the result */ 
+
+
+
+
+somthing like that!, and we can ajust it based on langauges ig, to find a global one 
+

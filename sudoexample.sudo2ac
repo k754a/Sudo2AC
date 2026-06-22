@@ -1,0 +1,17 @@
+# Comment structs are displayed like this 
+# You can type natural language and have a llm convert it into code, the succsess depends on how well you descirbe this!
+
+
+var test = four
+
+list test1 = {1, 2, 3, 4}
+
+loop through each test1 and find when it == test.
+    if we do
+        say we did it
+    if we dont
+        say error, not found
+
+
+
+end program.

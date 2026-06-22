@@ -1,0 +1,24 @@
+.env
+# Node dependencies
+**/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Compilation output (TypeScript/JavaScript build files)
+/out/
+/dist/
+
+# Visual Studio Code local files
+/.vscode-test/
+*.vsix
+
+# TypeScript build info cache
+*.tsbuildinfo
+
+# Log and database files
+*.log
+*.db
+
+# Operating System files
+.DS_Store
+Thumbs.db
