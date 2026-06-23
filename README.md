@@ -2,10 +2,6 @@
   <img src="https://github.com/k754a/Sudo2AC/blob/master/github_banner%20(1).png?raw=true" alt="Sudo2AC Banner" width="100%"/>
   
   # Sudo2AC
-  
-  A VS Code extension to convert pseudocode and comments into real working code, powered by Ollama.
-
-  ![Version](https://img.shields.io/badge/version-0.0.1-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Ollama](https://img.shields.io/badge/powered%20by-Ollama-orange)
 </div>
 
 ---
