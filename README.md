@@ -12,6 +12,7 @@ Converting pseudocode and comments into working code directly in your editor, po
 
 
 Highlight some comments and pseudocode, hit `Ctrl+Alt+Enter`, and watch it get rewritten into actual code in place—using the rest of your file as context.
+You can also rightclick on the highlighted code, and click `Sudo2AC: Convert Highlighted Code`, as there might be a small bug with `Ctrl+Alt+Enter`
 
 
 ## Requirements
