@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="github_banner(1).png" alt="Sudo2AC Banner" width="100%"/>
+  <img src="https://github.com/k754a/Sudo2AC/blob/master/github_banner%20(1).png?raw=true" alt="Sudo2AC Banner" width="100%"/>
   
   # Sudo2AC
   
